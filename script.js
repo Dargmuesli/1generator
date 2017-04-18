@@ -90,6 +90,7 @@ function translate(text) {
     new Replacement('Acht ', '6 ', 1),
     new Replacement('Neun ', '6 ', 1),
     new Replacement('Zehn ', '6 ', 1),
+    new Replacement(' Leben ', ' life', 1),
 
     // Umlaute
     new Replacement('ä', 'e', 0.5),
