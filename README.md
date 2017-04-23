@@ -1,14 +1,30 @@
 # 1generator
-Das ist ja 1 toller Gemerator vong Tecmik her! Das nuss ich gleich mahl ausprobierem! Kamm sogahr foll rendom umd kommt imner wieder meues vong Zufall her. Macht ers mal mur eimfache Zeichem ersetsung kommt aba fielleicht später moch mehr Imtelligemz reim.
+Das ist ja 1 toller Gemerator vong Tecmik her!
+Kamm sogahr foll rendom umd kommt imner wieder meues vong Zufall her.
+Macht ers mal mur eimfache Zeichem ersetsung kommt aba fielleicht später moch mehr Imtelligemz reim.
+Hier kamm mam sogahr auch dem VONG-Style betrachtem!
 
-## Demo
+## Demo-Versionen
+
+### Dargmuesli
+Im [@VONG](https://www.facebook.com/VongMir/)/[DUDEN](http://www.duden.de/)/[Reclam](https://www.reclam.de/)-Style.  
+[https://jonas-thelemann.de/1generator/](https://jonas-thelemann.de/1generator/)
+
+### greatestview
+Das Original.  
 [https://greatestview.de/1generator/](https://greatestview.de/1generator/)
 
-## License
-[GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html) or later  
+## Lizenz
+[GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html) oder neuer  
 Copyright (c) 2016, Kim-Christian Meyer
 
-## Contact
+## Kontakt
+
+### Dargmuesli
+Jonas Thelemann  
+[jonas-thelemann.de](https://jonas-thelemann.de)
+
+### greatestview
 Kim-Christian Meyer  
 [info@greatestview.de](mailto:info@greatestview.de)  
 [greatestview.de](https://greatestview.de)

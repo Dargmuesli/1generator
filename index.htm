@@ -1,96 +1,43 @@
 <!DOCTYPE html>
-<html lang="de-DE" class="no-js">
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <!--
+        Das ist ja 1 toller Gemerator fom Tecmik her! Das nuss ich gleich mahl ausprobierem!
 
-  <!--
-    Das ist ja 1 toller Gemerator fom Tecmik her! Das nuss ich gleich mahl ausprobierem!
-
-    @author      Kim-Christian Meyer
-    @copyright   2016 Kim-Christian Meyer
-    @license     GPL-3.0+
-  -->
-
-  <title>1generator</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
-  <style>
-    * + * {
-      margin-top: 1em !important;
-    }
-
-    body {
-      max-width: 550px;
-      padding: 1em 20px;
-      margin: 0 auto;
-      -webkit-transform: rotate(-1deg);
-          -ms-transform: rotate(-1deg);
-              transform: rotate(-1deg);
-
-      font-family: Arial, sans-serif;
-      font-size: 100%;
-    }
-
-    @media screen and (min-width: 768px) {
-      body {
-        font-size: 120%;
-      }
-    }
-
-    textarea,
-    button {
-      padding: 0.6em 0.8em;
-      border-radius: 10px;
-      font-size: 100%;
-      line-height: 1.3em;
-      box-sizing: border-box;
-      -webkit-appearance: none;
-    }
-
-    button {
-      border: 0;
-      cursor: pointer;
-      color: #4302ff;
-      background: -moz-linear-gradient(74deg, rgba(13,255,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%); /* ff3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,0,0,1)), color-stop(50%, rgba(255,255,0,1)), color-stop(100%, rgba(13,255,0,1))); /* safari4+,chrome */
-      background: -webkit-linear-gradient(74deg, rgba(13,255,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%); /* safari5.1+,chrome10+ */
-      background: -o-linear-gradient(74deg, rgba(13,255,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%); /* opera 11.10+ */
-      background: -ms-linear-gradient(74deg, rgba(13,255,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%); /* ie10+ */
-      background: linear-gradient(16deg, rgba(13,255,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%); /* w3c */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#0DFF00',GradientType=0 ); /* ie6-9 */
-    }
-
-    h1 {
-      font-size: 2em;
-      color: #4302ff;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .by-line {
-      font-size: 0.38em;
-      font-weight: normal;
-      font-style: italic;
-      color: 4302ff;
-    }
-
-    .translation-textarea {
-      width: 100%;
-      min-height: 8em;
-      border: 1px solid #feca2e;
-      color: #e62828;
-    }
-  </style>
-</head>
-<body>
-  <h1>1generator <span class="by-line">by <a class="by-line-link" href="https://greatestview.de/was-ist-das-fuer-1-generator">greatestview.de</a></span></h1>
-  <form>
-    <textarea id="input" class="translation-textarea translation-textarea-in">Manche Menschen sind wie eine Blume in der Wüste und verharren dort ein Leben lang und warten bis sie von richtigen Menschen gegossen werden ehe sie sich entfalten.
-    </textarea>
-    <textarea id="output" class="translation-textarea translation-textarea-out"></textarea>
-    <button id="translate" class="translation-button" type="submit">Übernsezen mit Random vong Zufalln her</button>
-  </form>
-  <script src="script.js"></script>
-</body>
+        @author      Kim-Christian Meyer
+        @copyright   2016 Kim-Christian Meyer
+        @license     GPL-3.0+
+      -->
+        <title>
+            1generator
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="heading">
+                <h1>
+                    1GENERATOR
+                </h1>
+            </div>
+            <form>
+                <textarea id="input">
+                    Manche Menschen sind wie eine Blume in der Wüste und verharren dort ein Leben lang und warten bis sie von richtigen Menschen gegossen werden ehe sie sich entfalten.
+                </textarea>
+                <button id="translate" type="submit">
+                    Übersetzen mit Random von Zufall her
+                </button>
+                <textarea id="output">
+                </textarea>
+            </form>
+            <div id="owner">
+                <span>
+                    by <a class="by-line-link" href="https://greatestview.de/was-ist-das-fuer-1-generator">greatestview.de</a>
+                </span>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
