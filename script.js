@@ -4,7 +4,7 @@
  * @license     GPL-3.0+
  */
 
-"use strict";
+'use strict';
 
 
 /**
@@ -144,7 +144,7 @@ function translate(text) {
 }
 
 // Init
-document.getElementById('translate').addEventListener('click', function(e) {
+document.getElementById('translate').addEventListener('click', function (e) {
     var input,
         output;
 
