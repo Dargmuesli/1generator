@@ -1,0 +1,30 @@
+services:
+- docker
+env:
+  global:
+  - secure: fsYMbL/PhxsRmO64jRgkoOYi437N3VZfz+f2Rcm407w62p/Ec4T4ZSa89ndKvB7tsnG9BMfcErp7O4Ph5OyKECgDMBfmYCpJr8CE13HJKMmOnEKRyTT1ZFCj6/5VBJKaSLD6PC/KCNBlK7BKLOpsfn/SRZZ7WcmTylABCg7v8aE0MJotc74wSuPIjqt8zyEa1dJUTBDw6Qxvpf3xhx4JYRf45HapiW6b+C8wB38FqGc9ACSxKCBWPW9wlMpAgKRxl+EZenjsgQlUWT78sh20qMUU0NoAyxTw5Vwe2mjjByuDdjXKK0reWleFgl/ebHiNMWi0MuN7IhAZ+etxyWvInAMlIsjFzyuPhsyfdr+Ksb0kzPQ8NwFAE3jWEu6AArj23qR8xfQPbHfOqj6PJkYeB94nxsbQbMFzhRYSadcGFjechJ0o0WdCGwzE4t4Lo5ydYZh0QgSedNa/u3/fu4TgdFWn3vkjUhdR2fpwuVl1Xx72LPxRmhZ1SrGqx0x82+dFSlJ8KrI/T9IvdPz5rqNNWyaoop+H9U6XBeE1lkVn9+z54TjJcPlCQA/l1MAerg6nfj+I6i4MgoK5edTahjXK/cqdNQgW6RMlHZUeiVwrjvhV+6aDfmywJyYcELebt9Z9R9WtmsU56bluF2zuQfp7gjIzRuxAvAYvn1/LXY/BYIQ= #DOCKER_USER
+  - secure: hUtqqH0Nb9QRX7KVfvGcYPAHVGsD4S6nvj3rCjM2/f9M2bjKUHMBL6WNzCqwYJKGfxkZGIuDp41Glk0VPojQVTpZdcYpZDD4b81fCgVhPRa1hlFmk0nxaljBPYNAwU29foY2aJPJgFlsbqCO9W40GiCAraHr06fH3cgOPz5z6ExSpM5l8UiImnoOuNgesDHTUDSNST9I7WVoaqdrsk9xI9JT39ZyH5hQVowPjj45n/iZL6wnZTrk4ZiUlnY7RN9iKf6dwPSlRUFPeS+0Z+svOv6F42/Xi2HnveyOBvE0y67mtgA2Ma25co2Mmrd4yOssr3gGzRDcvsE8lAbNE0R5m4qj5CwBC98mr5F0Y31kJkPQ6KIdYwXAfEIQEr8Zu/7S808M9I0sK7eiyA3BavQnvwmDJBsVMJWsKcQggJ/P0dY0OJFoUS7FjsOsWnH+ArK3nNBH/k1zBMEAQ80FRrZx6ubiWZpSonBBIdVpvFskKyPBsoboeq9znNfmp8ljYwHefr4soWFFnBWDKTl8MxWKtxgWjIjlGZRR8Ekk1F+d163Cj15/A+JJWuv9lSzUVDUhHmFwL5TR+s+BEbPEPD0HtFM4OacLfr1GaTUUwF31WTk+siJw/u6qfSNQ98K31WyOOUct/yHJJHYGQdd+z4DpTNVBW7/TgTBsZZFHRslgvog= #DOCKER_PASS
+  - COMMIT=${TRAVIS_COMMIT::8}
+  - REPO=dargmuesli/1generator
+  - DOCKER_BUILDKIT=1
+addons:
+  apt:
+    packages:
+    - docker-ce
+before_install:
+- echo '{"experimental":true}' | sudo tee /etc/docker/daemon.json
+- sudo service docker restart
+script:
+- docker build -t 1generator .
+- docker build -t $REPO:$COMMIT .
+after_success:
+- docker login -u $DOCKER_USER -p $DOCKER_PASS
+- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH;
+  fi`
+- docker tag $REPO:$COMMIT $REPO:$TAG
+- docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+- docker push $REPO
+notifications:
+  email:
+    on_success: change
+    on_failure: change
