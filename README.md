@@ -20,7 +20,7 @@ Das Original.
 Um das Docker-Image zu bauen, reicht es den folgenden Befehl auszuführen:
 
 ```bash
-docker build -t 1generator .
+docker build -t dargmuesli/1generator .
 ```
 
 ## Lizenz
