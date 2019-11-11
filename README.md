@@ -1,3 +1,5 @@
+[![build status](https://travis-ci.com/dargmuesli/1generator.svg?branch=master)](https://travis-ci.com/dargmuesli/1generator "build status")
+
 # 1generator
 Das ist ja 1 toller Gemerator vong Tecmik her!
 Kamm sogahr foll rendom umd kommt imner wieder meues vong Zufall her.
